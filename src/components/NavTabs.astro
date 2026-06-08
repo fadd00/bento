@@ -1,0 +1,50 @@
+---
+interface Props {
+  activeTab: string;
+}
+
+const { activeTab } = Astro.props;
+
+const tabs = [
+  { name: "Projects", href: "/projects", id: "projects" },
+  { name: "Work", href: "/work", id: "work" },
+  { name: "Music", href: "/music", id: "music" },
+  { name: "Contact", href: "/contact", id: "contact" },
+  { name: "Blog", href: "#", id: "blog", external: true },
+];
+---
+
+<nav class="w-full mt-4 mb-2">
+  <div class="flex items-center gap-6 flex-wrap">
+    {
+      tabs.map((tab) => {
+        const isActive = activeTab === tab.id;
+        if (tab.external) {
+          return (
+            <a
+              href={tab.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-beige hover:text-white transition-colors text-sm md:text-[15px] font-normal flex items-center gap-1 group"
+            >
+              {tab.name}
+              <span class="text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+            </a>
+          );
+        }
+        return (
+          <a
+            href={tab.href}
+            class={`text-sm md:text-[15px] transition-colors ${
+              isActive
+                ? "text-white font-semibold"
+                : "text-beige hover:text-white font-normal"
+            }`}
+          >
+            {tab.name}
+          </a>
+        );
+      })
+    }
+  </div>
+</nav>

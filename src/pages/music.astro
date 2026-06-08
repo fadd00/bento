@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Music" activeTab="music">
+  <div class="flex flex-col gap-10 max-w-2xl mx-auto">
+
+    <!-- Now Playing – Featured Card (Notification Card style from design.md) -->
+    <div class="p-6 rounded-xl border-2 bg-gradient-to-br from-[#0F172A] to-[#1E1B4B] border-[#4F46E5] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]">
+      <div class="flex items-center gap-5">
+        <div class="w-20 h-20 rounded-lg bg-gradient-to-br from-[#4F46E5] to-[#831843] flex items-center justify-center flex-shrink-0 shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" opacity="0.9">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold tracking-[0.15em] uppercase mb-1.5 text-[#4F46E5]">Now Playing</p>
+          <h3 class="text-xl font-semibold text-white mb-1">Lo-Fi Coding Session</h3>
+          <p class="text-sm text-[#E3DCCF]">chill beats &middot; lofi hip hop</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Currently on Repeat -->
+    <section>
+      <h3 class="text-2xl font-semibold text-white mb-1">Currently on Repeat</h3>
+      <p class="text-sm text-[#C6BCA9] mb-6">A collection of tracks keeping me focused while coding.</p>
+
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 bg-[rgba(0,0,0,0.4)] border-[rgba(82,82,91,0.2)] hover:border-[rgba(82,82,91,0.4)] hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.15)] group cursor-pointer">
+          <div class="w-11 h-11 rounded-lg bg-[#4F46E5] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-[15px] font-semibold text-white truncate">Midnight Echo</div>
+            <div class="text-[13px] text-[#E3DCCF]">Atlas Bound</div>
+          </div>
+          <span class="text-xs text-[#71717A] flex-shrink-0 tabular-nums">3:24</span>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 bg-[rgba(0,0,0,0.4)] border-[rgba(82,82,91,0.2)] hover:border-[rgba(82,82,91,0.4)] hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.15)] group cursor-pointer">
+          <div class="w-11 h-11 rounded-lg bg-[#831843] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-[15px] font-semibold text-white truncate">Neon Pulse</div>
+            <div class="text-[13px] text-[#E3DCCF]">Waveshaper</div>
+          </div>
+          <span class="text-xs text-[#71717A] flex-shrink-0 tabular-nums">4:12</span>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 bg-[rgba(0,0,0,0.4)] border-[rgba(82,82,91,0.2)] hover:border-[rgba(82,82,91,0.4)] hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.15)] group cursor-pointer">
+          <div class="w-11 h-11 rounded-lg bg-[#7C2D12] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-[15px] font-semibold text-white truncate">Stellar Drift</div>
+            <div class="text-[13px] text-[#E3DCCF]">Homeomorphic</div>
+          </div>
+          <span class="text-xs text-[#71717A] flex-shrink-0 tabular-nums">5:01</span>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 bg-[rgba(0,0,0,0.4)] border-[rgba(82,82,91,0.2)] hover:border-[rgba(82,82,91,0.4)] hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.15)] group cursor-pointer">
+          <div class="w-11 h-11 rounded-lg bg-[#4F46E5] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-[15px] font-semibold text-white truncate">Hushed Tones</div>
+            <div class="text-[13px] text-[#E3DCCF]">Khruangbin</div>
+          </div>
+          <span class="text-xs text-[#71717A] flex-shrink-0 tabular-nums">3:58</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorite Genres -->
+    <section>
+      <h3 class="text-2xl font-semibold text-white mb-4">Favorite Genres</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full border bg-[rgba(79,70,229,0.2)] text-[#4F46E5] border-[#4F46E5]">Lo-Fi Beats</span>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full border bg-[rgba(131,24,67,0.2)] text-[#831843] border-[#831843]">Synthwave</span>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full border bg-[rgba(79,70,229,0.2)] text-[#4F46E5] border-[#4F46E5]">Ambient</span>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full border bg-[rgba(131,24,67,0.2)] text-[#831843] border-[#831843]">Electronic</span>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full border bg-[rgba(79,70,229,0.2)] text-[#4F46E5] border-[#4F46E5]">Indie Pop</span>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
