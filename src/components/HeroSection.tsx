@@ -1,13 +1,18 @@
 export default function HeroSection() {
   return (
-    <header className="relative w-full h-48 sm:h-56 overflow-hidden mb-6">
-      <div className="hero-bg absolute inset-0" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-primary" />
+    <header className="relative w-full h-72 sm:h-80 mb-6 z-10">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-bg.png')" }}
+      />
+      {/* Fade to black at the bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-bg-primary" />
 
       <div className="absolute bottom-0 left-0 right-0">
         <div className="max-w-content mx-auto px-4">
-          <div className="flex items-end gap-4 sm:gap-5 translate-y-8 sm:translate-y-10">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-4 border-bg-primary bg-bg-secondary shadow-xl shrink-0">
+          <div className="flex items-end gap-4 sm:gap-5 translate-y-6 sm:translate-y-8 relative z-10">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shadow-xl shrink-0">
               <img
                 src="/avatar.png"
                 alt="Fadd"

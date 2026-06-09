@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/cloudflare": "^10.0.0",
-    "@astrojs/react": "^5.0.7",
+    "@astrojs/react": "^3.6.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.0.0",
     "framer-motion": "^11.18.2",
