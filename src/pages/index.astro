@@ -1,3 +1,39 @@
 ---
-return Astro.redirect('/projects');
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import App from "../components/App";
+
+const projects = await getCollection("projects");
+const work = await getCollection("work");
+
+const projectData = projects.map(function (p) {
+  return {
+    title: p.data.title,
+    description: p.data.description,
+    emoji: p.data.emoji,
+    tags: p.data.tags,
+    github: p.data.github,
+    live: p.data.live,
+    size: p.data.size,
+    featured: p.data.featured,
+    order: p.data.order,
+  };
+});
+
+const workData = work.map(function (w) {
+  return {
+    title: w.data.title,
+    company: w.data.company,
+    period: w.data.period,
+    description: w.data.description,
+    initials: w.data.initials,
+    accentColor: w.data.accentColor,
+    current: Boolean(w.data.current),
+    order: w.data.order,
+  };
+});
 ---
+
+<BaseLayout title="Portfolio">
+  <App projects={projectData} work={workData} client:load />
+</BaseLayout>

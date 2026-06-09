@@ -3,7 +3,24 @@
     "allow": [
       "Read(//home/fadd/.claude/plugins/**)",
       "Read(//home/fadd/.claude/**)",
-      "Bash(python3 -m json.tool)"
+      "Bash(python3 -m json.tool)",
+      "Bash(bash /home/fadd/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/brainstorming/scripts/start-server.sh --project-dir /home/fadd/Documents/vscode/bento)",
+      "Bash(ls /home/fadd/Documents/vscode/)",
+      "Read(//home/fadd/Documents/vscode/**)",
+      "Bash(mkdir -p /home/fadd/Documents/vscode/bento-react)",
+      "Bash(cp -r /home/fadd/Documents/vscode/bento/src /home/fadd/Documents/vscode/bento-react/src)",
+      "Bash(cp -r /home/fadd/Documents/vscode/bento/public /home/fadd/Documents/vscode/bento/public)",
+      "Bash(cp -r /home/fadd/Documents/vscode/bento/tailwind.config.* /home/fadd/Documents/vscode/bento-react/)",
+      "Bash(npm install *)",
+      "Bash(kill 1084258)",
+      "Bash(kill 1085136)",
+      "Bash(xargs kill -9)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:4321/)",
+      "Bash(npx astro *)"
+    ],
+    "additionalDirectories": [
+      "/home/fadd/Documents/vscode"
     ]
   }
 }

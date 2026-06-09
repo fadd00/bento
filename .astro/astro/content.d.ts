@@ -146,42 +146,42 @@ declare module 'astro:content' {
   slug: "5-hari-lagi";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "agentic-ai.md": {
 	id: "agentic-ai.md";
   slug: "agentic-ai";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "charlotte-essence.md": {
 	id: "charlotte-essence.md";
   slug: "charlotte-essence";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "laravel-ticketing.md": {
 	id: "laravel-ticketing.md";
   slug: "laravel-ticketing";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "logic-block-puzzle.md": {
 	id: "logic-block-puzzle.md";
   slug: "logic-block-puzzle";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "web-crawler.md": {
 	id: "web-crawler.md";
   slug: "web-crawler";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 };
 "work": {
@@ -190,7 +190,7 @@ declare module 'astro:content' {
   slug: "balai-tekkomdik";
   body: string;
   collection: "work";
-  data: InferEntrySchema<"work">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -202,5 +202,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
