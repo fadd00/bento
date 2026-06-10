@@ -13,7 +13,7 @@ export default function ProjectsSection({ projects }: Props) {
   return (
     <section>
       <div className="mb-8">
-        <h2 className="text-xl font-semibold text-white mb-1">
+        <h2 className="text-xl font-semibold text-white mb-1 text-center">
           Here's some stuff I've built
         </h2>
       </div>
@@ -22,7 +22,7 @@ export default function ProjectsSection({ projects }: Props) {
         variants={staggerContainerVariants}
         initial="initial"
         animate="animate"
-        className="grid grid-cols-4 gap-4 auto-rows-[140px] sm:auto-rows-[160px]"
+        className="grid grid-cols-2 gap-4 auto-rows-[160px] sm:auto-rows-[180px]"
       >
         {sorted.map((project) => (
           <ProjectCard key={project.title} {...project} />

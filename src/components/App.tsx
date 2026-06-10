@@ -1,5 +1,6 @@
 import { TabProvider, useTab } from '../lib/tab-state';
 import HeroSection from './HeroSection';
+import ProfileSection from './ProfileSection';
 import NavTabs from './NavTabs';
 import PageTransition from './PageTransition';
 import ProjectsSection from './sections/ProjectsSection';
@@ -29,8 +30,11 @@ function TabContent({ projects, work }: AppProps) {
 export default function App({ projects, work }: AppProps) {
   return (
     <TabProvider>
+      {/* Hero: full viewport, full width */}
+      <HeroSection />
+      {/* Content: centered */}
       <div className="max-w-content mx-auto px-4 pb-12">
-        <HeroSection />
+        <ProfileSection />
         <NavTabs />
         <TabContent projects={projects} work={work} />
       </div>

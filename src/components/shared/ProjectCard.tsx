@@ -13,6 +13,7 @@ const spanClasses: Record<string, string> = {
 export default function ProjectCard({
   title,
   description,
+  image,
   emoji,
   tags,
   github,
@@ -24,7 +25,15 @@ export default function ProjectCard({
       variants={slideUpItemVariants}
       className={`glass-card relative flex flex-col p-5 ${spanClasses[size]} overflow-hidden group`}
     >
-      {size === 'large' && (
+      {/* Background image */}
+      {image && (
+        <div className="absolute inset-0 z-0">
+          <img src={image} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/60 to-transparent" />
+        </div>
+      )}
+
+      {size === 'large' && !image && (
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -49,13 +58,13 @@ export default function ProjectCard({
           </div>
 
           {size !== 'small' && (
-            <p className="text-sm text-fg-secondary line-clamp-2 mt-1 max-w-xl">
+            <p className="text-sm text-fg-secondary line-clamp-2 mt-1">
               {description}
             </p>
           )}
 
-          {tags.length > 0 && size !== 'small' && (
-            <div className="flex flex-wrap gap-1 mt-1">
+          {tags.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-1.5">
               {tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}

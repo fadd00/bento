@@ -18,7 +18,7 @@ export default function NavTabs() {
   const { activeTab, setActiveTab } = useTab();
 
   return (
-    <nav className="w-full mt-4 mb-2 pt-10 sm:pt-12">
+    <nav className="w-full mt-8 mb-8">
       <div className="flex items-center gap-6 flex-wrap">
         {tabs.map((tab) => {
           if (tab.external) {

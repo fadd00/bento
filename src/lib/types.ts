@@ -1,6 +1,7 @@
 export interface ProjectData {
   title: string;
   description: string;
+  image?: string;
   emoji: string;
   tags: string[];
   github?: string;
