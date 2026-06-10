@@ -2,10 +2,13 @@ export default function HeroSection() {
   return (
     <header className="relative w-full">
       <img
-        src="/hero-bg.png"
+        src="/hero-bg.webp"
         alt=""
         className="w-full h-auto block"
         aria-hidden="true"
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
       />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-black/65" />

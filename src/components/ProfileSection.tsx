@@ -3,7 +3,7 @@ export default function ProfileSection() {
     <section className="flex items-center gap-4 sm:gap-5 py-10 sm:py-14">
       <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shadow-2xl shrink-0">
         <img
-          src="/avatar.png"
+          src="/avatar.webp"
           alt="Fadd"
           className="w-full h-full object-cover"
         />
