@@ -2,13 +2,13 @@ import { motion } from 'framer-motion';
 import { staggerContainerVariants, slideRightItemVariants } from '../../lib/animations';
 
 const tracks = [
-  { title: 'Midnight Echo', artist: 'Atlas Bound', duration: '3:24', color: '#4F46E5' },
-  { title: 'Neon Pulse', artist: 'Waveshaper', duration: '4:12', color: '#831843' },
-  { title: 'Stellar Drift', artist: 'Homeomorphic', duration: '5:01', color: '#7C2D12' },
-  { title: 'Hushed Tones', artist: 'Khruangbin', duration: '3:58', color: '#4F46E5' },
+  { title: 'Adu Nasib', artist: 'Riski Inrahim', duration: '3:24', image: 'https://i.ytimg.com/vi/LyDihaEYkAQ/hqdefault.jpg' },
+  { title: 'About You', artist: 'The 1975', duration: '4:12', image: 'https://i.ytimg.com/vi/4PgOJwUCdIc/hqdefault.jpg' },
+  { title: '505', artist: 'Arctic Monkeys', duration: '5:01', image: 'https://i.ytimg.com/vi/qU9mHegkTc4/hqdefault.jpg' },
+  { title: 'Dancing in the Moonlight', artist: 'Toploader', duration: '3:58', image: 'https://i.ytimg.com/vi/67CN8FOCc84/hqdefault.jpg' },
 ];
 
-const genres = ['Lo-Fi Beats', 'Synthwave', 'Ambient', 'Electronic', 'Indie Pop'];
+const genres = ['Jazz', 'J-pop', 'Indie Rock', 'Rage rap', 'Ambient'];
 
 export default function MusicSection() {
   return (
@@ -23,19 +23,17 @@ export default function MusicSection() {
         className="p-6 rounded-xl border-2 bg-gradient-to-br from-bg-primary to-indigo-950/30 border-indigo-500/30 shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]"
       >
         <div className="flex items-center gap-5">
-          <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-indigo-600 to-pink-800 flex items-center justify-center shrink-0 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" opacity="0.9">
-              <path d="M9 18V5l12-2v13" />
-              <circle cx="6" cy="18" r="3" />
-              <circle cx="18" cy="16" r="3" />
-            </svg>
-          </div>
+          <img
+            src="https://i.ytimg.com/vi/PXkHAlskFAM/hqdefault.jpg"
+            alt="晴る - Sunny album art"
+            className="w-20 h-20 rounded-lg object-cover shrink-0 shadow-lg"
+          />
           <div>
             <p className="text-xs font-semibold tracking-[0.15em] uppercase mb-1.5 text-indigo-400">
               Now Playing
             </p>
-            <h3 className="text-xl font-semibold text-white mb-1">Lo-Fi Coding Session</h3>
-            <p className="text-sm text-fg-secondary">chill beats &middot; lofi hip hop</p>
+            <h3 className="text-xl font-semibold text-white mb-1">晴る - Sunny</h3>
+            <p className="text-sm text-fg-secondary">Yorushika &middot; second person</p>
           </div>
         </div>
       </motion.div>
@@ -53,14 +51,11 @@ export default function MusicSection() {
               variants={slideRightItemVariants}
               className="glass-card flex items-center gap-4 p-4 group cursor-pointer"
             >
-              <div
-                className="w-11 h-11 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200"
-                style={{ backgroundColor: track.color }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
-                  <polygon points="5,3 19,12 5,21" />
-                </svg>
-              </div>
+              <img
+                src={track.image}
+                alt={`${track.title} album art`}
+                className="w-11 h-11 rounded-lg object-cover shrink-0 group-hover:scale-105 transition-transform duration-200"
+              />
               <div className="flex-1 min-w-0">
                 <div className="text-[15px] font-semibold text-white truncate">
                   {track.title}
