@@ -6,6 +6,6 @@ tags: ["Godot", "GDScript", "Game Development", "2D Graphics"]
 github: "#"
 live: "https://andhikahutama.itch.io/alfheimr-the-tree-of-life"
 featured: true
-size: "medium"
+size: "small"
 order: 2
 ---

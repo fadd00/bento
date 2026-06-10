@@ -5,6 +5,6 @@ tags: ["Laravel", "MySQL", "PHP", "Web Development"]
 github: "#"
 live: "#"
 featured: false
-size: "small"
+size: "medium"
 order: 3
 ---

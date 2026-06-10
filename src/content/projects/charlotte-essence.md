@@ -6,6 +6,6 @@ tags: ["PHP", "HTML", "CSS", "Company Profile"]
 github: "#"
 live: "https://charlottecocosugar.com"
 featured: false
-size: "small"
-order: 2
+size: "large"
+order: 1
 ---

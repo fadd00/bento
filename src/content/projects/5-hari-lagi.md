@@ -6,6 +6,6 @@ tags: ["Godot", "GDScript", "Game Development", "2D Graphics"]
 github: "#"
 live: "https://gedagedi-studio.itch.io/34-gedagedi-studio-student-5-hari-lagi"
 featured: true
-size: "large"
-order: 1
+size: "small"
+order: 2
 ---
