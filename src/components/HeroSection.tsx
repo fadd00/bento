@@ -8,7 +8,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/65" />
       {/* Fade to black at the bottom */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-primary" />
     </header>

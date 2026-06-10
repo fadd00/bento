@@ -15,6 +15,7 @@ export interface WorkData {
   company: string;
   period: string;
   description: string;
+  logo?: string;
   initials: string;
   accentColor: string;
   current: boolean;

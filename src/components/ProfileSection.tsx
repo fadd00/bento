@@ -10,7 +10,7 @@ export default function ProfileSection() {
       </div>
       <div>
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-1 leading-tight">
-          Fadd
+          Dhika
         </h1>
         <p className="text-fg-secondary text-sm sm:text-base tracking-wide">
           Backend Developer &bull; IT Student

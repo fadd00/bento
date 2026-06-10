@@ -11,14 +11,13 @@ const tabs: NavItem[] = [
   { name: 'Work', id: 'work' },
   { name: 'Music', id: 'music' },
   { name: 'Contact', id: 'contact' },
-  { name: 'Blog', id: 'blog', external: true },
 ];
 
 export default function NavTabs() {
   const { activeTab, setActiveTab } = useTab();
 
   return (
-    <nav className="w-full mt-8 mb-8">
+    <nav className="w-full mt-2 mb-8">
       <div className="flex items-center gap-6 flex-wrap">
         {tabs.map((tab) => {
           if (tab.external) {

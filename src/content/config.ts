@@ -22,6 +22,7 @@ const work = defineCollection({
     company: z.string(),
     period: z.string(),
     description: z.string(),
+    logo: z.string().optional(),
     initials: z.string(),
     accentColor: z.string(),
     current: z.boolean().default(false),
