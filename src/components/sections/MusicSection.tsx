@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { staggerContainerVariants, slideRightItemVariants } from '../../lib/animations';
 
 const tracks = [
-  { title: '晴る - Sunny', artist: 'Yorushika', image: 'https://i.ytimg.com/vi/PXkHAlskFAM/maxresdefault.jpg' },
-  { title: 'Fake Plastic Trees', artist: 'Radiohead', image: 'https://i.ytimg.com/vi/6gDhsUWCHrg/maxresdefault.jpg' },
-  { title: 'Adu Nasib', artist: 'Riski Inrahim', image: 'https://i.ytimg.com/vi/LyDihaEYkAQ/maxresdefault.jpg' },
-  { title: 'About You', artist: 'The 1975', image: 'https://i.ytimg.com/vi/4PgOJwUCdIc/maxresdefault.jpg' },
-  { title: '505', artist: 'Arctic Monkeys', image: 'https://i.ytimg.com/vi/qU9mHegkTc4/maxresdefault.jpg' },
-  { title: 'Dancing in the Moonlight', artist: 'Toploader', image: 'https://i.ytimg.com/vi/67CN8FOCc84/maxresdefault.jpg' },
+  { title: '晴る - Sunny', artist: 'Yorushika', image: 'https://i.ytimg.com/vi/PXkHAlskFAM/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=PXkHAlskFAM&si=1Iuf_qVfaErJOKRg' },
+  { title: 'Fake Plastic Trees', artist: 'Radiohead', image: 'https://i.ytimg.com/vi/6gDhsUWCHrg/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=6gDhsUWCHrg&si=yXnn7tduRxkhzf0l' },
+  { title: 'Adu Nasib', artist: 'Riski Inrahim', image: 'https://i.ytimg.com/vi/LyDihaEYkAQ/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=LyDihaEYkAQ&si=E5OpPoEjdsvh4tXW' },
+  { title: 'About You', artist: 'The 1975', image: 'https://i.ytimg.com/vi/4PgOJwUCdIc/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=4PgOJwUCdIc&si=aXxIY9UNzpIrkk3f' },
+  { title: '505', artist: 'Arctic Monkeys', image: 'https://i.ytimg.com/vi/qU9mHegkTc4/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=qU9mHegkTc4&si=ozKd9oxXKRhoS_lR' },
+  { title: 'Dancing in the Moonlight', artist: 'Toploader', image: 'https://i.ytimg.com/vi/67CN8FOCc84/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=67CN8FOCc84&si=LvAUK_9hHhW1a9QF' },
 ];
 
 const genres = ['Jazz', 'J-pop', 'Indie Rock', 'Rage rap', 'Ambient'];
@@ -33,10 +33,13 @@ export default function MusicSection() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
           {tracks.map((track) => (
-            <motion.div
+            <motion.a
               key={track.title}
+              href={track.url}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={slideRightItemVariants}
-              className="relative aspect-square rounded-xl overflow-hidden shadow-lg group cursor-pointer"
+              className="relative aspect-square rounded-xl overflow-hidden shadow-lg group cursor-pointer block"
             >
               {/* Album art */}
               <img
@@ -51,7 +54,7 @@ export default function MusicSection() {
                 <h4 className="text-white font-semibold text-base truncate">{track.title}</h4>
                 <p className="text-white/70 text-sm truncate">{track.artist}</p>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </section>
