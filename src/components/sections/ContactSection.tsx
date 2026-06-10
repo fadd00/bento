@@ -4,7 +4,7 @@ import SocialLink from '../shared/SocialLink';
 
 const links = [
   {
-    href: '#',
+    href: 'https://github.com/fadd00',
     label: 'GitHub',
     external: true,
     icon: (
@@ -15,7 +15,17 @@ const links = [
     ),
   },
   {
-    href: '#',
+    href: 'https://www.instagram.com/dhikaarch',
+    label: 'Instagram',
+    external: true,
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 11.5a8.5 8.5 0 0 0-17 0v8.5a1.5 1.5 0 0 0 3 0v-8.5a5 5 0 0 1 10 0z" />
+      </svg>
+    ),
+  },
+  {
+    href: 'www.linkedin.com/in/andhika-hutama',
     label: 'LinkedIn',
     external: true,
     icon: (
@@ -27,7 +37,7 @@ const links = [
     ),
   },
   {
-    href: 'mailto:fadd@example.com',
+    href: 'mailto:andhikahutama9@gmail.com',
     label: 'Email Me',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
