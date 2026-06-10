@@ -14,7 +14,6 @@ export default function ProjectCard({
   title,
   description,
   image,
-  emoji,
   tags,
   github,
   live,
