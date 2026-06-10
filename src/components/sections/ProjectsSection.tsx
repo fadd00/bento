@@ -13,7 +13,7 @@ export default function ProjectsSection({ projects }: Props) {
   return (
     <section>
       <div className="mb-8">
-        <h2 className="text-xl font-semibold text-white mb-1 text-center">
+        <h2 className="text-xl font-semibold text-white mb-1 text-left">
           Here's some stuff I've built
         </h2>
       </div>

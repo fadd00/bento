@@ -1,11 +1,10 @@
 ---
 title: "ExionPW.com"
 description: "A comprehensive website for an MMORPG game featuring player statistics, guild management, and game information. Built with Laravel and MySQL."
-emoji: "⚔️"
 tags: ["Laravel", "MySQL", "PHP", "Web Development"]
 github: "#"
 live: "#"
 featured: false
-size: "medium"
+size: "small"
 order: 3
 ---

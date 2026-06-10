@@ -49,9 +49,6 @@ export default function ProjectCard({
       <div className="relative z-10 flex flex-col h-full justify-end">
         <div className="flex flex-col gap-1.5 mt-auto">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-bg-secondary flex items-center justify-center text-xs overflow-hidden shrink-0 border border-white/5">
-              {emoji}
-            </div>
             <h3 className="text-[15px] font-semibold text-white leading-tight truncate">
               {title}
             </h3>
