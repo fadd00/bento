@@ -5,5 +5,5 @@ tags: ["Godot 4", "GDScript", "Game Dev"]
 github: "#"
 featured: false
 size: "small"
-order: 4
+order: 2
 ---

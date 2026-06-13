@@ -169,16 +169,16 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"logic-block-puzzle.md": {
-	id: "logic-block-puzzle.md";
-  slug: "logic-block-puzzle";
+"lms.md": {
+	id: "lms.md";
+  slug: "lms";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"web-crawler.md": {
-	id: "web-crawler.md";
-  slug: "web-crawler";
+"logic-block-puzzle.md": {
+	id: "logic-block-puzzle.md";
+  slug: "logic-block-puzzle";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
