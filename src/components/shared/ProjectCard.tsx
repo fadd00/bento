@@ -28,8 +28,16 @@ export default function ProjectCard(props: Props) {
   return (
     <motion.div
       variants={slideUpItemVariants}
+      role="button"
+      tabIndex={0}
       onClick={() => onSelect?.(props)}
-      className={`glass-card relative flex flex-col p-5 ${spanClasses[size]} overflow-hidden group cursor-pointer`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelect?.(props);
+        }
+      }}
+      className={`glass-card relative flex flex-col p-5 min-h-[176px] sm:min-h-0 ${spanClasses[size]} overflow-hidden group cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/30`}
     >
       {/* Background image */}
       {image && (
@@ -66,7 +74,7 @@ export default function ProjectCard(props: Props) {
         )}
 
         {/* Quick direct links */}
-        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
+        <div className="flex items-center gap-2 opacity-75 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity ml-auto">
           {github && github !== '#' && (
             <a
               href={github}

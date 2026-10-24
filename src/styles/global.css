@@ -55,3 +55,13 @@ body {
   background-color: currentColor;
   border-radius: 1px;
 }
+
+/* Hide scrollbars for clean horizontal swipes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

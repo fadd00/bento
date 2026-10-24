@@ -40,7 +40,7 @@ export default function ProfileSection() {
           href="https://wa.me/6282310180884?text=Hi%20Dhika,%20I%20saw%20your%20portfolio."
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors flex items-center gap-1 group"
+          className="hover:text-white transition-colors flex items-center gap-1 group py-1"
         >
           <span>WhatsApp</span>
           <span className="text-[10px] text-muted-text group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
@@ -48,7 +48,7 @@ export default function ProfileSection() {
         <span className="text-white/10">&bull;</span>
         <a
           href="mailto:andhikahutama9@gmail.com"
-          className="hover:text-white transition-colors flex items-center gap-1 group"
+          className="hover:text-white transition-colors flex items-center gap-1 group py-1"
         >
           <span>Email</span>
           <span className="text-[10px] text-muted-text group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
@@ -58,7 +58,7 @@ export default function ProfileSection() {
           href="https://github.com/fadd00"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors flex items-center gap-1 group"
+          className="hover:text-white transition-colors flex items-center gap-1 group py-1"
         >
           <span>GitHub</span>
           <span className="text-[10px] text-muted-text group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
@@ -68,7 +68,7 @@ export default function ProfileSection() {
           href="/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white transition-colors flex items-center gap-1 group"
+          className="hover:text-white transition-colors flex items-center gap-1 group py-1"
         >
           <span>CV</span>
           <span className="text-[10px] text-muted-text group-hover:text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>

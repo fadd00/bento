@@ -4,7 +4,7 @@ export default function HeroSection() {
       <img
         src="/hero-bg.webp"
         alt=""
-        className="w-full h-auto block"
+        className="w-full h-28 sm:h-auto object-cover block"
         aria-hidden="true"
         fetchPriority="high"
         loading="eager"

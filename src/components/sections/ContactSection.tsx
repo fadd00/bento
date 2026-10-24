@@ -74,12 +74,12 @@ export default function ContactSection() {
             variants={slideUpItemVariants}
             className="py-3.5 flex items-center justify-between group transition-colors hover:text-white"
           >
-            <span className="text-xs sm:text-sm text-fg-secondary group-hover:text-white transition-colors">
+            <span className="text-xs sm:text-sm text-fg-secondary group-hover:text-white transition-colors shrink-0">
               {item.label}
             </span>
-            <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-text group-hover:text-white transition-colors">
-              <span>{item.value}</span>
-              <span className="text-[11px] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-text group-hover:text-white transition-colors min-w-0">
+              <span className="truncate">{item.value}</span>
+              <span className="text-[11px] shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 ↗
               </span>
             </div>

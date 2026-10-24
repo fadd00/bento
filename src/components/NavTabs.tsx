@@ -18,7 +18,7 @@ export default function NavTabs() {
 
   return (
     <nav className="w-full mt-4 mb-8">
-      <div className="flex items-center gap-4 sm:gap-6 flex-wrap border-b border-white/[0.06] pb-3">
+      <div className="flex items-center gap-5 sm:gap-6 flex-nowrap overflow-x-auto no-scrollbar border-b border-white/[0.06] pb-3">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
 
@@ -26,7 +26,7 @@ export default function NavTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative text-sm md:text-[15px] transition-colors pb-2 ${
+              className={`relative text-sm md:text-[15px] transition-colors pb-2 shrink-0 whitespace-nowrap ${
                 isActive
                   ? 'text-white font-semibold'
                   : 'text-fg-secondary hover:text-fg font-normal'

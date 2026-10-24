@@ -30,7 +30,7 @@ export default function ProjectsSection({ projects }: Props) {
 
   return (
     <section>
-      <div className="flex items-center justify-between gap-4 mb-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <h2 className="text-lg sm:text-xl font-semibold text-white">
           Projects
         </h2>
@@ -62,7 +62,7 @@ export default function ProjectsSection({ projects }: Props) {
           variants={staggerContainerVariants}
           initial="initial"
           animate="animate"
-          className="grid grid-cols-2 gap-4 auto-rows-[180px] sm:auto-rows-[190px]"
+          className="grid grid-cols-2 gap-3.5 sm:gap-4 auto-rows-auto sm:auto-rows-[190px]"
         >
           {filtered.map((project) => (
             <ProjectCard

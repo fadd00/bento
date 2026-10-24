@@ -26,7 +26,12 @@ export default function ProjectModal({ project, onClose }: Props) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-project-title"
+        className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6"
+      >
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -36,18 +41,18 @@ export default function ProjectModal({ project, onClose }: Props) {
           className="fixed inset-0 bg-black/80 backdrop-blur-sm"
         />
 
-        {/* Modal Window */}
+        {/* Modal Window / Mobile Bottom Sheet */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 8 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 8 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.2 }}
-          className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto bg-bg-secondary border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-7 z-10 flex flex-col"
+          className="relative w-full max-w-lg max-h-[88vh] sm:max-h-[85vh] overflow-y-auto bg-bg-secondary border-t sm:border border-white/10 rounded-t-2xl sm:rounded-2xl shadow-2xl p-5 sm:p-7 z-10 flex flex-col"
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-1.5 text-muted-text hover:text-white transition-colors"
+            className="absolute top-4 right-4 p-2 text-muted-text hover:text-white transition-colors"
             aria-label="Close modal"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +78,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 {project.role}
               </span>
             )}
-            <h3 className="text-xl font-bold text-white">{project.title}</h3>
+            <h3 id="modal-project-title" className="text-xl font-bold text-white">{project.title}</h3>
           </div>
 
           {/* Description */}
