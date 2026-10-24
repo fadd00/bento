@@ -185,23 +185,16 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "work": {
-"balai-tekkomdik copy.md": {
-	id: "balai-tekkomdik copy.md";
-  slug: "balai-tekkomdik-copy";
+"balai-tekkomdik.md": {
+	id: "balai-tekkomdik.md";
+  slug: "balai-tekkomdik";
   body: string;
   collection: "work";
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
-"feelfree.md": {
-	id: "feelfree.md";
-  slug: "feelfree";
-  body: string;
-  collection: "work";
-  data: InferEntrySchema<"work">
-} & { render(): Render[".md"] };
-"magang.md": {
-	id: "magang.md";
-  slug: "magang";
+"mosu.md": {
+	id: "mosu.md";
+  slug: "mosu";
   body: string;
   collection: "work";
   data: InferEntrySchema<"work">

@@ -10,7 +10,6 @@ const tracks = [
   { title: 'Dancing in the Moonlight', artist: 'Toploader', image: 'https://i.ytimg.com/vi/67CN8FOCc84/maxresdefault.jpg', url: 'https://music.youtube.com/watch?v=67CN8FOCc84&si=LvAUK_9hHhW1a9QF' },
 ];
 
-const genres = ['Jazz', 'J-pop', 'Indie Rock', 'Rage rap', 'Ambient'];
 
 export default function MusicSection() {
   return (

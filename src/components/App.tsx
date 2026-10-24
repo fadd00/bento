@@ -5,6 +5,7 @@ import NavTabs from './NavTabs';
 import PageTransition from './PageTransition';
 import ProjectsSection from './sections/ProjectsSection';
 import WorkSection from './sections/WorkSection';
+import StackSection from './sections/StackSection';
 import MusicSection from './sections/MusicSection';
 import ContactSection from './sections/ContactSection';
 import type { ProjectData, WorkData } from '../lib/types';
@@ -21,6 +22,7 @@ function TabContent({ projects, work }: AppProps) {
     <PageTransition activeTab={activeTab}>
       {activeTab === 'projects' && <ProjectsSection projects={projects} />}
       {activeTab === 'work' && <WorkSection work={work} />}
+      {activeTab === 'stack' && <StackSection />}
       {activeTab === 'music' && <MusicSection />}
       {activeTab === 'contact' && <ContactSection />}
     </PageTransition>
@@ -30,14 +32,20 @@ function TabContent({ projects, work }: AppProps) {
 export default function App({ projects, work }: AppProps) {
   return (
     <TabProvider>
-      {/* Hero: full viewport, full width */}
+      {/* Hero */}
       <HeroSection />
-      {/* Content: centered */}
-      <div className="max-w-content mx-auto px-4 pb-12">
+
+      {/* Main Container */}
+      <main className="max-w-content mx-auto px-4 pb-16">
         <ProfileSection />
         <NavTabs />
         <TabContent projects={projects} work={work} />
-      </div>
+
+        {/* Minimal Footer */}
+        <footer className="mt-14 pt-6 border-t border-white/[0.06] text-center text-xs text-muted-text">
+          &copy; {new Date().getFullYear()} Dhika &bull; Built with Astro
+        </footer>
+      </main>
     </TabProvider>
   );
 }

@@ -11,6 +11,10 @@ const projectData = projects.map((p) => ({
   description: p.data.description,
   image: p.data.image,
   tags: p.data.tags,
+  category: p.data.category,
+  role: p.data.role,
+  status: p.data.status,
+  highlights: p.data.highlights,
   github: p.data.github,
   live: p.data.live,
   size: p.data.size,
@@ -23,6 +27,8 @@ const workData = work.map((w) => ({
   company: w.data.company,
   period: w.data.period,
   description: w.data.description,
+  highlights: w.data.highlights,
+  technologies: w.data.technologies,
   logo: w.data.logo,
   initials: w.data.initials,
   accentColor: w.data.accentColor,
@@ -31,6 +37,6 @@ const workData = work.map((w) => ({
 }));
 ---
 
-<BaseLayout title="Portfolio">
+<BaseLayout title="Andhika Hutama (Dhika) — Backend Specialist">
   <App projects={projectData} work={workData} client:load />
 </BaseLayout>

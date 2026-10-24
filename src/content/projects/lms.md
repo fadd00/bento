@@ -1,11 +1,18 @@
 ---
 title: "Library Management System"
-description: "A responsive laravel framework about library management system using railway for hosting and cloudflare for dns and subdomain"
+description: "A full-featured backoffice management system for library operations, member accounts, and book cataloging, deployed with automated cloud infrastructure."
 image: "/lms.webp"
-tags: ["laravel", "php", "sqlite", "vite"]
+tags: ["Laravel", "PHP", "SQLite", "Vite", "Cloudflare", "Railway"]
+category: "backend-web"
+role: "Backend & DevOps Developer"
+status: "live"
+highlights:
+  - "Engineered backoffice workflows for member registrations, inventory tracking, and book loan lifecycle."
+  - "Configured cloud hosting on Railway with automated builds and Cloudflare DNS/SSL subdomain routing."
+  - "Implemented role-based permissions, data validation, and clean query operations in Laravel."
 github: "https://github.com/Irfansyah001/lms_backoffice_laravel"
 live: "https://lms.andhu.tech/"
-featured: false
+featured: true
 size: "small"
-order: 1
+order: 2
 ---

@@ -2,13 +2,13 @@ import { useTab, type Tab } from '../lib/tab-state';
 
 interface NavItem {
   name: string;
-  id: Tab | 'blog';
-  external?: boolean;
+  id: Tab;
 }
 
 const tabs: NavItem[] = [
   { name: 'Projects', id: 'projects' },
   { name: 'Work', id: 'work' },
+  { name: 'Stack & Services', id: 'stack' },
   { name: 'Music', id: 'music' },
   { name: 'Contact', id: 'contact' },
 ];
@@ -17,35 +17,18 @@ export default function NavTabs() {
   const { activeTab, setActiveTab } = useTab();
 
   return (
-    <nav className="w-full mt-2 mb-8">
-      <div className="flex items-center gap-6 flex-wrap">
+    <nav className="w-full mt-4 mb-8">
+      <div className="flex items-center gap-4 sm:gap-6 flex-wrap border-b border-white/[0.06] pb-3">
         {tabs.map((tab) => {
-          if (tab.external) {
-            return (
-              <a
-                key={tab.id}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-fg-secondary hover:text-fg transition-colors text-sm md:text-[15px] font-normal flex items-center gap-1 group"
-              >
-                {tab.name}
-                <span className="text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  ↗
-                </span>
-              </a>
-            );
-          }
-
           const isActive = activeTab === tab.id;
 
           return (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as Tab)}
-              className={`relative text-sm md:text-[15px] transition-colors pb-1 ${
+              onClick={() => setActiveTab(tab.id)}
+              className={`relative text-sm md:text-[15px] transition-colors pb-2 ${
                 isActive
-                  ? 'text-fg font-semibold'
+                  ? 'text-white font-semibold'
                   : 'text-fg-secondary hover:text-fg font-normal'
               }`}
             >

@@ -15,4 +15,5 @@
 *.tsbuildinfo
 .superpowers
 .claude
+.agents
 /docs

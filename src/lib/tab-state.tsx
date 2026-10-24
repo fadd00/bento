@@ -6,9 +6,9 @@ import {
   type ReactNode,
 } from 'react';
 
-export type Tab = 'projects' | 'work' | 'music' | 'contact';
+export type Tab = 'projects' | 'work' | 'stack' | 'music' | 'contact';
 
-const TAB_ORDER: Tab[] = ['projects', 'work', 'music', 'contact'];
+const TAB_ORDER: Tab[] = ['projects', 'work', 'stack', 'music', 'contact'];
 
 function isValidTab(tab: string | null): tab is Tab {
   return tab !== null && TAB_ORDER.includes(tab as Tab);
